@@ -24,6 +24,7 @@
     --gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -120,8 +121,34 @@ body {
 
 /* Main Content */
 .main-content {
-    margin-top: 80px;
+  margin-top: 80px;
 }
+
+
+.features-section {
+  background-color: var(--card-bg); /* Light or dark depending on theme */
+  padding: 60px 0;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.feature-card {
+  background: var(--card-bg-hover); /* Slightly different for card contrast */
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1 1 30%;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
 
 /* Footer */
 .footer {
@@ -236,4 +263,9 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--secondary-color);
+}
+
+html {
+    scroll-behavior: super smooth;
+    scroll-padding-top: 80px; 
 }
