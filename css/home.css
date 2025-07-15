@@ -65,17 +65,19 @@
 
 .feature-card {
     background: var(--card-bg);
+    color: var(--text-color);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg-hover);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .feature-icon {
@@ -95,14 +97,6 @@
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
     .features {
         grid-template-columns: 1fr;
     }

@@ -5,6 +5,15 @@
     gap: 4rem;
     align-items: center;
     margin: 4rem 0;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-content.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-text {
@@ -22,6 +31,15 @@
     justify-content: center;
     color: white;
     font-size: 1.2rem;
+
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-image.slide-right {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media (max-width: 768px) {
@@ -29,4 +47,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+}
+html {
+    scroll-behavior: smooth;
 }

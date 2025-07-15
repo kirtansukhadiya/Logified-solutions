@@ -1,73 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIFIED SOLUTIONS - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOGIFIED SOLUTIONS - Home</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">LOGIFIED SOLUTIONS</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products & Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
-            </ul>
-            <div class="mobile-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">LOGIFIED SOLUTIONS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products & Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="mobile-menu" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
 
-    <main class="main-content">
-        <div class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Complete Lifting Solutions</h1>
-                    <p>Your trusted partner for all types of lifting equipment with expert engineering and reliable after-sales support</p>
-                    <a href="contact.html" class="cta-button">Get Quote</a>
-                    <div class="lottie-animation" id="hero-animation"></div>
-                </div>
-            </div>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Complete Lifting Solutions</h1>
+          <p>Your trusted partner for all types of lifting equipment with expert engineering and reliable after-sales support</p>
+          <a href="contact.html" class="cta-button">Get Quote</a>
+          <div class="lottie-animation" id="hero-animation"></div>
         </div>
-        
-        <div class="container">
-            <div class="features">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Custom Engineering</h3>
-                    <p>Tailored solutions designed to meet your specific lifting requirements</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
-                    <h3>Fast Delivery</h3>
-                    <p>30 tons per week manufacturing capacity for quick project completion</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Expert Support</h3>
-                    <p>Comprehensive after-sales service including maintenance and upgrades</p>
-                </div>
-            </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="container">
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+          <h3>Custom Engineering</h3>
+          <p>Tailored solutions designed to meet your specific lifting requirements</p>
         </div>
-    </main>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+          <h3>Fast Delivery</h3>
+          <p>30 tons per week manufacturing capacity for quick project completion</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-tools"></i></div>
+          <h3>Expert Support</h3>
+          <p>Comprehensive after-sales service including maintenance and upgrades</p>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <footer class="footer">
-        <!-- Footer content same as original -->
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
+          <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About Us</a></p>
+          <p><a href="products.html">Products & Services</a></p>
+          <p><a href="#why-choose">Why Choose Us</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <p>EOT Cranes</p>
+          <p>Gantry Cranes</p>
+          <p>Jib Cranes</p>
+          <p>Chain & Wire Rope Hoists</p>
+          <p>Installation & Maintenance</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
+          <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
+          <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/animations.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script>
+    // Sample Lottie animation load
+    const heroAnimationData = {}; // You need to define or import your Lottie JSON
+    lottie.loadAnimation({
+      container: document.getElementById('hero-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: heroAnimationData
+    });
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
