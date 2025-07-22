@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIFIED SOLUTIONS - Contact Us</title>
+    <title>Contact Us - LOGIFIED SOLUTIONS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <header class="header">
@@ -17,8 +18,11 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="products.html">Products & Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
+                <li><a href="why-choose.html">Why Choose Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
@@ -30,59 +34,141 @@
 
     <main class="main-content">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <h1 class="section-title">Contact Us</h1>
             <p class="section-subtitle">Get in touch for your lifting equipment needs</p>
             
+            <div class="contact-info">
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>kirtanskh@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 XXX XXX XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <form class="contact-form" id="contactForm">
-                <!-- Form fields same as original -->
+                <div class="form-animation">
+                    <lottie-player 
+                        src="https://assets3.lottiefiles.com/packages/lf20_u25cckyh.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 150px; height: 150px; margin: 0 auto;" 
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                </div>
+                
+                <h2>Send us a Message</h2>
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your lifting equipment requirements, project specifications, or any questions you have..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <div class="btn-loading" style="display: none;">
+                        <div class="loading"></div>
+                    </div>
+                </button>
+                
+                <div id="formMessage"></div>
             </form>
         </div>
     </main>
 
     <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
-          <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
+              <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <p><a href="index.html">Home</a></p>
+              <p><a href="about.html">About Us</a></p>
+              <p><a href="products.html">Products & Services</a></p>
+              <p><a href="why-choose.html">Why Choose Us</a></p>
+              <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+              <h3>Services</h3>
+              <p>EOT Cranes</p>
+              <p>Gantry Cranes</p>
+              <p>Jib Cranes</p>
+              <p>Chain & Wire Rope Hoists</p>
+              <p>Installation & Maintenance</p>
+            </div>
+            <div class="footer-section">
+              <h3>Contact Info</h3>
+              <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
+              <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
+              <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
+              <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
           </div>
         </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <p><a href="index.html">Home</a></p>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="products.html">Products & Services</a></p>
-          <p><a href="contact.html">Contact</a></p>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <p>EOT Cranes</p>
-          <p>Gantry Cranes</p>
-          <p>Jib Cranes</p>
-          <p>Chain & Wire Rope Hoists</p>
-          <p>Installation & Maintenance</p>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
-          <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
-          <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
-      </div>
-    </div>
-  </footer>
+      </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/form.js"></script>
 </body>
 </html>

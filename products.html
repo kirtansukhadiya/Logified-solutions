@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIFIED SOLUTIONS - Products & Services</title>
+    <title>Products & Services - LOGIFIED SOLUTIONS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/products.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <header class="header">
@@ -16,9 +17,12 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products & Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
+                <li><a href="products.html" class="active">Products & Services</a></li>
+                <li><a href="why-choose.html">Why Choose Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
@@ -29,88 +33,110 @@
     </header>
 
     <main class="main-content">
-      
         <div class="container">
-          <br>
-    <h2 class="section-title">Products & Services</h2>
-    <p class="section-subtitle">Comprehensive lifting solutions for all your industrial needs</p>
-    <div class="products-services-wrapper">
-        <!-- Products Section -->
-        <div class="products-box fade-in">
-            <h3 class="section-heading">Our Products</h3>
-            <ul class="products-list">
-                <li>EOT Cranes (single and double girders)</li>
-                <li>Monorail hoist with support structure</li>
-                <li>Gantry / Goliath crane</li>
-                <li>Jib cranes – pillar mounted and wall mounted</li>
-                <li>Chain hoist and wire rope hoist</li>
-                <li>Overhead cranes with gantry, Rails and DSL busbar</li>
-                <li>Motorised transfer trolleys</li>
-                <li>Heavy industries fabrication and erection work</li>
-            </ul>
-        </div>
+            <h1 class="section-title">Products & Services</h1>
+            <p class="section-subtitle">Comprehensive lifting solutions for all your industrial needs</p>
+            
+            <div class="products-services-wrapper">
+                <div class="products-box fade-in">
+                    <div class="product-image">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h2 class="section-heading">Our Products</h2>
+                    <ul class="products-list">
+                        <li><strong>EOT Cranes</strong> - Single and double girder cranes for heavy-duty industrial applications</li>
+                        <li><strong>Monorail Hoist</strong> - Complete system with support structure for efficient material handling</li>
+                        <li><strong>Gantry / Goliath Cranes</strong> - Heavy-duty outdoor cranes for large-scale operations</li>
+                        <li><strong>Jib Cranes</strong> - Pillar mounted and wall mounted for precise positioning</li>
+                        <li><strong>Chain Hoist and Wire Rope Hoist</strong> - Various lifting capacities available</li>
+                        <li><strong>Overhead Cranes</strong> - Complete systems with gantry, rails and DSL busbar</li>
+                        <li><strong>Motorised Transfer Trolleys</strong> - Efficient heavy load transportation</li>
+                        <li><strong>Heavy Industries Fabrication</strong> - Custom fabrication and erection work</li>
+                    </ul>
+                </div>
 
-        <!-- Services Section -->
-        <div class="services-box fade-in">
-            <h3 class="section-heading">Our Services</h3>
-            <ul class="products-list">
-                <li>Crane erection and commissioning work.</li>
-                <li>Crane modifications work.</li>
-                <li>Spare parts Support.</li>
-                <li>Crane AMC / servicing work.</li>
-                <li>Crane health check up, overhauling, and refurbishment / upgradation work.</li>
-                <li>Gantry and rail alignment work.</li>
-                <li>DSL busbar supply and alignment work.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+                <div class="services-box fade-in">
+                    <div class="product-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h2 class="section-heading">Our Services</h2>
+                    <ul class="products-list">
+                        <li><strong>Crane Erection & Commissioning</strong> - Professional installation and setup services</li>
+                        <li><strong>Crane Modifications</strong> - Customization work to meet changing requirements</li>
+                        <li><strong>Spare Parts Support</strong> - Comprehensive inventory and quick delivery</li>
+                        <li><strong>Crane AMC / Servicing</strong> - Annual maintenance contracts and regular servicing</li>
+                        <li><strong>Crane Health Check-up</strong> - Complete assessment and overhauling services</li>
+                        <li><strong>Refurbishment / Upgradation</strong> - Modernization of existing equipment</li>
+                        <li><strong>Gantry and Rail Alignment</strong> - Precision alignment for optimal performance</li>
+                        <li><strong>DSL Busbar Supply & Alignment</strong> - Complete electrical power solutions</li>
+                    </ul>
+                </div>
+            </div>
 
-    </main>
-
-   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
-          <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+            <div class="product-features">
+                <h2 class="section-title">Product Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Safety First</h3>
+                        <p>All products meet industry safety standards with comprehensive testing protocols</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Precision Engineering</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <p><a href="index.html">Home</a></p>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="products.html">Products & Services</a></p>
-          <p><a href="contact.html">Contact</a></p>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <p>EOT Cranes</p>
-          <p>Gantry Cranes</p>
-          <p>Jib Cranes</p>
-          <p>Chain & Wire Rope Hoists</p>
-          <p>Installation & Maintenance</p>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
-          <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
-          <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
-      </div>
-    </div>
-  </footer>
-
-    <script src="js/main.js"></script>
+        <footer class="footer">
+            <div class="container">
+              <div class="footer-content">
+                <div class="footer-section">
+                  <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
+                  <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
+                  <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="footer-section">
+                  <h3>Quick Links</h3>
+                  <p><a href="index.html">Home</a></p>
+                  <p><a href="about.html">About Us</a></p>
+                  <p><a href="products.html">Products & Services</a></p>
+                  <p><a href="why-choose.html">Why Choose Us</a></p>
+                  <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                  <h3>Services</h3>
+                  <p>EOT Cranes</p>
+                  <p>Gantry Cranes</p>
+                  <p>Jib Cranes</p>
+                  <p>Chain & Wire Rope Hoists</p>
+                  <p>Installation & Maintenance</p>
+                </div>
+                <div class="footer-section">
+                  <h3>Contact Info</h3>
+                  <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
+                  <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
+                  <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
+                  <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
+              </div>
+            </div>
+          </footer>
+          
+    <!-- Scripts -->
     <script src="js/theme.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

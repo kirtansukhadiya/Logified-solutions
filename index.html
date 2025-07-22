@@ -12,40 +12,52 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/home.css" />
+  
+  <!-- Lottie Animation -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="home-page">
   <!-- Header -->
   <header class="header">
     <nav class="nav container">
-      <a href="index.html" class="logo">LOGIFIED SOLUTIONS</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Products & Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li>
-          <button class="theme-toggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i>
-          </button>
-        </li>
-      </ul>
-      <div class="mobile-menu" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <a href="index.html" class="logo">LOGIFIED SOLUTIONS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="products.html">Products & Services</a></li>
+            <li><a href="why-choose.html">Why Choose Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </ul>
+        <div class="mobile-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
-  </header>
+</header>
 
   <!-- Main Content -->
   <main class="main-content">
     <div class="hero">
       <div class="container">
         <div class="hero-content">
+            
           <h1>Complete Lifting Solutions</h1>
           <p>Your trusted partner for all types of lifting equipment with expert engineering and reliable after-sales support</p>
           <a href="contact.html" class="cta-button">Get Quote</a>
-          <div class="lottie-animation" id="hero-animation"></div>
+          <div class="lottie-animation">
+            <lottie-player 
+              src="https://assets2.lottiefiles.com/packages/lf20_qp1q7mct.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px;"
+              loop
+              autoplay>
+            </lottie-player>
+          </div>
         </div>
       </div>
     </div>
@@ -92,6 +104,7 @@
           <p><a href="index.html">Home</a></p>
           <p><a href="about.html">About Us</a></p>
           <p><a href="products.html">Products & Services</a></p>
+          <p><a href="why-choose.html">Why Choose Us</a></p>
           <p><a href="contact.html">Contact</a></p>
         </div>
         <div class="footer-section">
@@ -117,20 +130,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-  <script>
-    // Sample Lottie animation load
-    const heroAnimationData = {}; // You need to define or import your Lottie JSON
-    lottie.loadAnimation({
-      container: document.getElementById('hero-animation'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: heroAnimationData
-    });
-  </script>
   <script src="js/main.js"></script>
   <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

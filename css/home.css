@@ -1,13 +1,14 @@
 /* Home Section */
 
 .main-content {
-  margin-top: 50px;
+  margin-top: 70px;
   background-image: url('../assets/prefab-building-size.jpg');
-  background-size: 150%; /* ✅ zoom effect — try 120% to 200% */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   padding: 50px 0;
+  min-height: 60vh;
 }
 .hero {
     background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23374151" width="1200" height="600"/><g fill="%23475569"><rect x="0" y="0" width="100" height="100"/><rect x="200" y="100" width="100" height="100"/><rect x="400" y="200" width="100" height="100"/><rect x="600" y="50" width="100" height="100"/><rect x="800" y="150" width="100" height="100"/><rect x="1000" y="250" width="100" height="100"/></g></svg>');
@@ -78,11 +79,18 @@
 }
 
 .lottie-animation {
-    width: 200px;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 2rem auto;
     opacity: 0;
     animation: fadeInUp 1s ease 0.9s forwards;
+}
+
+.lottie-animation lottie-player {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
 }
 
 /* Features Grid */
@@ -126,8 +134,105 @@
     color: var(--secondary-color);
 }
 
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .lottie-animation lottie-player {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    padding: 40px 0;
+    min-height: 50vh;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .lottie-animation lottie-player {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 @media (max-width: 768px) {
-    .features {
-        grid-template-columns: 1fr;
-    }
+  .main-content {
+    padding: 30px 0;
+    min-height: 40vh;
+  }
+  
+  .hero {
+    padding: 2.5rem 0;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    margin: 2rem 0;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    padding: 20px 0;
+    min-height: 30vh;
+  }
+  
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .lottie-animation lottie-player {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Landscape Mode Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .main-content {
+    min-height: 100vh;
+  }
+  
+  .hero {
+    padding: 1.5rem 0;
+  }
+  
+  .lottie-animation lottie-player {
+    width: 120px;
+    height: 120px;
+  }
 }

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <br>
-    <title>LOGIFIED SOLUTIONS - About Us</title>
+    <title>About Us - LOGIFIED SOLUTIONS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <header class="header">
@@ -16,10 +16,13 @@
             <a href="index.html" class="logo">LOGIFIED SOLUTIONS</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="products.html">Products & Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
+                <li><a href="why-choose.html">Why Choose Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
             </ul>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <span></span>
@@ -30,80 +33,108 @@
     </header>
 
     <main class="main-content">
-  <div class="container">
-    <div class="about-box">
-      <h2 class="section-title">About LOGIFIED SOLUTIONS</h2>
-      <div class="about-content">
-        <div class="about-text">
-                    <p>LOGIFIED SOLUTIONS PVT LTD is a modern lifting solutions provider specializing in all types of lifting equipment. With a manufacturing facility of over 12,000 sq. ft. and a 30-ton/week capacity, we deliver tailored solutions backed by expert after-sales support.</p>
-                    <br>
+        <div class="container">
+            <h1 class="section-title">About LOGIFIED SOLUTIONS</h1>
+            <p class="section-subtitle">Modern lifting solutions provider specializing in all types of lifting equipment</p>
+            
+            <div class="about-content animate">
+                <div class="about-text">
+                    <p><strong>LOGIFIED SOLUTIONS PVT LTD</strong> is a modern lifting solutions provider specializing in all types of lifting equipment. With a manufacturing facility of over <strong>12,000 sq. ft.</strong> and a <strong>30-ton/week capacity</strong>, we deliver tailored solutions backed by expert after-sales support.</p>
+                    
                     <p>Our team of experienced engineers and technicians work closely with clients to understand their unique requirements and deliver cost-effective, reliable lifting solutions. From design to installation and maintenance, we ensure complete customer satisfaction.</p>
-                    <br>
+                    
                     <p>With years of industry experience and a commitment to quality, we have established ourselves as a trusted partner for businesses across various sectors requiring reliable lifting equipment.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">12,000+</div>
+                            <div class="stat-label">Sq. Ft. Facility</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">30</div>
+                            <div class="stat-label">Tons/Week Capacity</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
                 </div>
-        <div class="about-image">
-          <i class="fas fa-industry"></i>
-          <div style="margin-left: 1rem;">
-            <div>12,000 sq. ft. Facility</div>
-            <div>30 Tons/Week Capacity</div>
-          </div>
+                <div class="about-image slide-right">
+                    <lottie-player 
+                        src="https://assets5.lottiefiles.com/packages/lf20_qp1q7mct.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: 300px;" 
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                        
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide comprehensive lifting solutions that ensure safety, efficiency, and reliability for our clients across various industries, while maintaining the highest standards of quality and service excellence.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading provider of innovative lifting solutions in India, recognized for our technical expertise, customer-centric approach, and unwavering commitment to excellence in every project.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</main>
+    </main>
 
     <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
-          <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>LOGIFIED SOLUTIONS PVT LTD</h3>
+              <p>Your trusted partner for comprehensive lifting equipment solutions. Quality, reliability, and expert support guaranteed.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <p><a href="index.html">Home</a></p>
+              <p><a href="about.html">About Us</a></p>
+              <p><a href="products.html">Products & Services</a></p>
+              <p><a href="why-choose.html">Why Choose Us</a></p>
+              <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+              <h3>Services</h3>
+              <p>EOT Cranes</p>
+              <p>Gantry Cranes</p>
+              <p>Jib Cranes</p>
+              <p>Chain & Wire Rope Hoists</p>
+              <p>Installation & Maintenance</p>
+            </div>
+            <div class="footer-section">
+              <h3>Contact Info</h3>
+              <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
+              <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
+              <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
+              <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
           </div>
         </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <p><a href="index.html">Home</a></p>
-          <p><a href="about.html">About Us</a></p>
-          <p><a href="products.html">Products & Services</a></p>
-          <p><a href="contact.html">Contact</a></p>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <p>EOT Cranes</p>
-          <p>Gantry Cranes</p>
-          <p>Jib Cranes</p>
-          <p>Chain & Wire Rope Hoists</p>
-          <p>Installation & Maintenance</p>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p><i class="fas fa-envelope"></i> kirtanskh@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91 XXX XXX XXXX</p>
-          <p><i class="fas fa-map-marker-alt"></i> Manufacturing Facility: 12,000 sq. ft.</p>
-          <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 LOGIFIED SOLUTIONS PVT LTD. All rights reserved. | Designed for lifting excellence.</p>
-      </div>
-    </div>
-  </footer>
+      </footer>
 
     <script src="js/theme.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            const aboutContent = document.querySelector('.about-content');
-            const aboutImage = document.querySelector('.about-image');
-
-            aboutContent.classList.add('animate');
-            aboutImage.classList.add('slide-right');
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
