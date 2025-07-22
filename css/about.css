@@ -108,13 +108,17 @@
 .vision-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: var(--border-color);
+  background-color: var(--card-bg-hover);
 }
 
 .mission-icon,
 .vision-icon {
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--logo-color);
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .mission-card h3,
@@ -122,35 +126,43 @@
   color: var(--text-color);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .mission-card p,
 .vision-card p {
-  color: var(--secondary-color);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
-.vision-icon svg {
+.vision-icon svg,
+.mission-icon svg {
   width: 80px;
   height: 80px;
   transition: all 0.3s ease;
+  color: var(--logo-color);
 }
 
 .vision-icon svg circle,
-.vision-icon svg path {
+.vision-icon svg path,
+.mission-icon svg circle,
+.mission-icon svg path {
   transition: all 0.3s ease;
 }
 
-.vision-card:hover .vision-icon svg {
+.vision-card:hover .vision-icon svg,
+.mission-card:hover .mission-icon svg {
   transform: scale(1.1);
 }
 
-[data-theme="dark"] .vision-icon svg {
-  color: var(--text-color-light);
+[data-theme="dark"] .vision-icon svg,
+[data-theme="dark"] .mission-icon svg {
+  color: var(--logo-color);
 }
 
-[data-theme="light"] .vision-icon svg {
-  color: var(--primary-color);
+[data-theme="light"] .vision-icon svg,
+[data-theme="light"] .mission-icon svg {
+  color: var(--logo-color);
 }
 
 @media (max-width: 768px) {

@@ -106,23 +106,36 @@
 .feature-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent-color);
+  border-color: var(--border-color);
 }
 
 .feature-item .feature-icon {
-  font-size: 2.5rem;
-  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.feature-item .feature-icon .custom-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--logo-color);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon .custom-icon {
+  transform: scale(1.1);
 }
 
 .feature-item h3 {
   color: var(--text-color);
   margin-bottom: 1rem;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .feature-item p {
-  color: var(--secondary-color);
+  color: var(--text-color);
   line-height: 1.6;
 }
 

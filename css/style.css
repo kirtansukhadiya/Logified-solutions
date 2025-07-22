@@ -11,6 +11,7 @@
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --header-bg: #ffffff;
   --header-bg-rgb: 255, 255, 255;
+  --logo-color: #1e3a8a;
 }
 
 [data-theme="dark"] {
@@ -26,6 +27,7 @@
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   --header-bg: #0f172a;
   --header-bg-rgb: 15, 23, 42;
+  --logo-color: #3b82f6;
 }
 
 * {
@@ -100,8 +102,9 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--logo-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-links {
@@ -201,6 +204,42 @@ body {
 .feature-card p {
   color: var(--secondary-color);
   line-height: 1.6;
+}
+
+.custom-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--logo-color);
+  transition: color 0.3s ease;
+}
+
+.feature-icon .custom-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.mission-icon .custom-icon,
+.vision-icon .custom-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+[data-theme="dark"] .custom-icon {
+  color: var(--logo-color);
+}
+
+.feature-card:hover .custom-icon,
+.mission-card:hover .custom-icon,
+.vision-card:hover .custom-icon {
+  color: var(--logo-color);
+  transform: scale(1.1);
+}
+
+[data-theme="dark"] .feature-card:hover .custom-icon,
+[data-theme="dark"] .mission-card:hover .custom-icon,
+[data-theme="dark"] .vision-card:hover .custom-icon {
+  color: var(--logo-color);
+  transform: scale(1.1);
 }
 
 /* CTA Section */
@@ -332,8 +371,10 @@ body {
 }
 
 .footer-section h3 {
-  color: var(--primary-color);
+  color: var(--logo-color);
   margin-bottom: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .footer-section p {
@@ -348,7 +389,7 @@ body {
 }
 
 .footer-section a:hover {
-  color: var(--primary-color);
+  color: var(--logo-color);
 }
 
 .social-links {
@@ -579,4 +620,68 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+}
+
+/* Mission and Vision */
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.mission-card,
+.vision-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: var(--logo-color);
+  background-color: var(--card-bg-hover);
+}
+
+.mission-icon,
+.vision-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--logo-color);
+}
+
+.mission-card h3,
+.vision-card h3 {
+  color: var(--logo-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.mission-card p,
+.vision-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .mission-vision {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 1.5rem;
+  }
+  
+  .mission-card h3,
+  .vision-card h3 {
+    font-size: 1.3rem;
+  }
 }
