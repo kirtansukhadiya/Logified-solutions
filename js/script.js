@@ -4,6 +4,70 @@ const navMenu = document.getElementById('nav-menu');
 const themeToggle = document.getElementById('theme-toggle');
 const contactForm = document.getElementById('contact-form');
 
+// Prevent white flash during page transitions
+document.addEventListener('DOMContentLoaded', () => {
+    // Apply current theme immediately
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Add animation class to body after a brief delay
+    setTimeout(() => {
+        document.body.classList.add('animate-content');
+    }, 50);
+});
+
+// Handle page transitions
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link && 
+        link.href && 
+        !link.href.startsWith('#') && 
+        !link.target && 
+        link.href !== window.location.href &&
+        link.origin === window.location.origin) {
+        
+        e.preventDefault();
+        
+        // Fade out current page
+        document.body.classList.add('page-exit');
+        
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 300);
+    }
+});
+
+// Disable transitions temporarily when page loads
+document.documentElement.classList.add('no-transition');
+window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+        document.documentElement.classList.remove('no-transition');
+    });
+});
+
+// Intersection Observer for scroll animations
+const observeElements = () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // Observe elements with animation classes
+    document.querySelectorAll('.fade-in, .slide-up, .slide-in').forEach(el => {
+        observer.observe(el);
+    });
+};
+
+// Initialize animations
+document.addEventListener('DOMContentLoaded', () => {
+    observeElements();
+});
+
 // Mobile Navigation
 hamburger?.addEventListener('click', () => {
     navMenu?.classList.toggle('active');
@@ -117,28 +181,6 @@ contactForm?.addEventListener('submit', async (e) => {
     }
 });
 
-// Intersection Observer for Animations
-const observeElements = () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    // Observe elements that should animate on scroll
-    document.querySelectorAll('.feature-card, .product-card, .service-card, .why-choose-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
-    });
-};
-
 // Navbar Background Change on Scroll
 const handleNavbarScroll = () => {
     const navbar = document.querySelector('.navbar');
@@ -238,7 +280,6 @@ window.addEventListener('error', (e) => {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
-    observeElements();
     showLoadingAnimation();
     lazyLoadImages();
 });
