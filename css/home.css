@@ -103,6 +103,20 @@
     margin: 0 auto;
 }
 
+.hero-image {
+    margin: 1rem auto;
+    max-width: 700px;
+    opacity: 0;
+    animation: fadeInUp 1s ease 1.2s forwards;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 /* Features Grid */
 .features {
     display: grid;

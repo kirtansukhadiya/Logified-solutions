@@ -121,75 +121,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handler
-const API_URL = 'http://localhost:3000'; // Change this to your deployed backend URL
-
-contactForm?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        message: formData.get('message')
-    };
-    
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoader = submitBtn.querySelector('.btn-loader');
-    const formMessage = document.getElementById('form-message');
-    
-    // Show loading state
-    btnText.style.display = 'none';
-    btnLoader.style.display = 'flex';
-    submitBtn.disabled = true;
-    
-    try {
-        const response = await fetch(`${API_URL}/api/contact`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            formMessage.textContent = result.message;
-            formMessage.className = 'form-message success';
-            contactForm.reset();
-        } else {
-            throw new Error(result.message);
-        }
-        
-    } catch (error) {
-        console.error('Form submission error:', error);
-        formMessage.textContent = error.message || 'There was an error sending your message. Please try again.';
-        formMessage.className = 'form-message error';
-    } finally {
-        // Reset button state
-        btnText.style.display = 'inline';
-        btnLoader.style.display = 'none';
-        submitBtn.disabled = false;
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    }
-});
+// Contact Form Handler is in form.js
 
 // Navbar Background Change on Scroll
 const handleNavbarScroll = () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-    } else {
-        navbar.style.background = '';
-        navbar.style.backdropFilter = '';
+    const navbar = document.querySelector('.header');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.background = '';
+            navbar.style.backdropFilter = '';
+        }
     }
 };
 

@@ -1,10 +1,12 @@
 // Contact Form Handling for LOGIFIED SOLUTIONS
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
+    console.log('Form found:', form);
     if (!form) return;
 
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
+        console.log('Form submitted');
 
         // Validate form first
         if (!validateForm(form)) {
@@ -29,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
             // Send to your contact server
-            const response = await fetch('http://127.0.0.1:3000/contact', {
+            const response = await fetch('http://localhost:3000/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 body: JSON.stringify(data)
             });
